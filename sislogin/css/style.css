@@ -1,5 +1,13 @@
 
 
+*  {
+    margin:0;
+    padding:0;
+}
+
+/* html, body {height:100%;} */
+
+
 .navAdmin{
     background-color: rgb(170, 170, 170);    
 }
@@ -9,9 +17,18 @@
 }
 
 table tbody tr th .btnTable{
-    margin:10px;
+    /* margin:10px; */
 }
 
 .btn{
     margin:2px;
 }
+
+.bg-footer{
+    background-color: rgb(170, 170, 170);
+    padding:50px;    
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
