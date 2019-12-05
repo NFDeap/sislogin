@@ -12,3 +12,4 @@ if ($result) { //Se o resultado for true...
 }
 ?>
 
+<?php include_once 'rodape.php'; ?>

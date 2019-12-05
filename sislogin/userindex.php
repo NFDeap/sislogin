@@ -12,7 +12,9 @@ if(!isset($_SESSION['id_usuario'])) { //Se ainda não estiver logado
 }
 ?>
 
-<?php if(isset($_GET['id_usuario'])){
+<?php 
+/* 
+if(isset($_GET['id_usuario'])){
 
     $id_usuario = $crud->limpaTexto($_GET['id_usuario']);
     $resultado = $crud->getDados("SELECT * FROM usuarios WHERE id_usuario=$id_usuario");
@@ -25,7 +27,7 @@ if(!isset($_SESSION['id_usuario'])) { //Se ainda não estiver logado
     }
 
 }
-
+ */
 ?>
 
 <div class="container-fluid my-5">
@@ -54,7 +56,7 @@ if(!isset($_SESSION['id_usuario'])) { //Se ainda não estiver logado
                                         <strong>ID Usuário:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="id_usuario" name="id_usuario" class="form-control mb-4" readonly
-                                        value="<?php echo $id_usuario ?>" />
+                                        value="<?php echo $_SESSION['id_usuario'] ?>" />
 
                                         <br>  
 
@@ -64,7 +66,7 @@ if(!isset($_SESSION['id_usuario'])) { //Se ainda não estiver logado
                                         <strong>Nome:</strong>
                                         </label>
                                         <input class="form-control" readonly type="text" id="nome" name="nome" class="form-control mb-4" maxlength="50" placeholder="Nome do Usuário" required 
-                                        value="<?php echo $nome_usuario ?>" />
+                                        value="<?php echo $_SESSION['nome_usuario'] ?>" />
 
                                         <br>  
 
@@ -74,7 +76,7 @@ if(!isset($_SESSION['id_usuario'])) { //Se ainda não estiver logado
                                         <strong>Login:</strong>
                                         </label>
                                         <input class="form-control" readonly type="text" id="login" name="login" class="form-control mb-4" placeholder="Login do Usuário" maxlength="20" required 
-                                        value="<?php echo $login ?>" />
+                                        value="<?php echo $_SESSION['login'] ?>" />
                                                                             
                                         <br>  
 
@@ -84,7 +86,7 @@ if(!isset($_SESSION['id_usuario'])) { //Se ainda não estiver logado
                                         <strong>E-mail:</strong>
                                         </label>
                                         <input class="form-control md-4" readonly type="email" id="email" name="email" class="form-control mb-4" placeholder="Email do Usuário" maxlength="50" required 
-                                        value="<?php echo $email ?>" >                                        
+                                        value="<?php echo $_SESSION['email'] ?>" >                                        
 
                                         <br> 
                                     
@@ -98,7 +100,8 @@ if(!isset($_SESSION['id_usuario'])) { //Se ainda não estiver logado
                             <div class="row">
 
                             <?php 
-                                echo "<a href=\"userpagina2.php?id_usuario=$linha[id_usuario]\" class='btn btn-sm btn-outline-warning' title='Editar o registro corrente'><i class='material-icons vertical-align-middle'>edit</i> Editar</a>";
+                                $id_usuario = $_SESSION['id_usuario'];
+                                echo "<a href=\"userpagina2.php?id_usuario=$id_usuario\" class='btn btn-sm btn-outline-warning' title='Editar o registro corrente'><i class='material-icons vertical-align-middle'>edit</i> Editar</a>";
                             ?>
                             
                             </div>                            
@@ -111,10 +114,6 @@ if(!isset($_SESSION['id_usuario'])) { //Se ainda não estiver logado
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
-
-
-</body>
-</html>
+<?php
+include_once("rodape.php");
+?>

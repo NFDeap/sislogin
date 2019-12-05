@@ -78,4 +78,7 @@ $validacoes = new Validacoes();
     </div>
 </div>
 
-</body>
+<?php
+include_once("rodape.php");
+?>
+
