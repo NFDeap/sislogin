@@ -44,7 +44,9 @@ $validacoes = new Validacoes();
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-   
+      <li class="nav-item">
+        <a class="nav-link" href="adminindex.php">Home</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="corpo.php">Lista de Usuários</a>
       </li>
