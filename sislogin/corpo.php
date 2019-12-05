@@ -9,7 +9,7 @@ include_once("cabecalhoAdmin.php");
     $resultado = $crud->getDados($query);    
 ?>
 
-
+<div class="geral">
 <div class="container-fluid my-5">
     <div class="row ">      
         <div class="col-6 sm-12 mx-auto"> 
@@ -63,7 +63,8 @@ include_once("cabecalhoAdmin.php");
         </div>
     </div>
 
-    <!-- </div> -->
+</div>
+</div>
 
 <?php
 include_once("rodape.php");
