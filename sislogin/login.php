@@ -16,14 +16,18 @@ if(isset($_POST['login']))
     $senha = $_POST['senha'];
 	
 	//Selecionando os dados a partir do ID informado
-    $resultado = $crud->getDados("SELECT id_usuario, email, senha, situacao, tipo FROM usuarios WHERE email='$email' AND situacao=1");         
+    $resultado = $crud->getDados("SELECT * FROM usuarios WHERE email='$email'");         
     
     //Percorrendo os dados retornados    
 	foreach ($resultado as $linha) {
-		$senhacriptografada = $linha['senha'];	
-        $id_usuario = $linha['id_usuario'];		
+        $id_usuario = $linha['id_usuario'];	
+        $senhacriptografada = $linha['senha'];	
+        $email = $linha['email'];
+        $login = $linha['login'];        
+        $nome_usuario = $linha['nome_usuario'];  
         $situacao = $linha['situacao'];
         $tipo = $linha['tipo'];
+        $cpf = $linha['CPF'];
     }    
         if($situacao == '0'){
             echo "<SCRIPT> 
@@ -32,8 +36,13 @@ if(isset($_POST['login']))
             </SCRIPT>";
         } else {	     
             if(password_verify($senha , $senhacriptografada)) {
-                $_SESSION['emailUsuario'] = $_POST['email'];
                 $_SESSION['id_usuario'] = $id_usuario;
+                $_SESSION['email'] = $_POST['email'];                
+                $_SESSION['login'] = $login;
+                $_SESSION['situacao'] = $situacao;
+                $_SESSION['nome_usuario'] = $nome_usuario;
+                $_SESSION['tipo'] = $tipo;
+                $_SESSION['CPF'] = $cpf;
                     if($tipo == 1){
                     header("Location: adminindex.php?id_usuario=$linha[id_usuario]");
                     $update = $crud->executarSql("UPDATE usuarios SET sessao=NOW() WHERE id_usuario=$id_usuario");

@@ -2,7 +2,9 @@
 include_once("cabecalhoAdmin.php");
 ?>
 
-<?php if(isset($_GET['id_usuario'])){
+<?php 
+/* 
+if(isset($_GET['id_usuario'])){
 
     $id_usuario = $crud->limpaTexto($_GET['id_usuario']);
     $resultado = $crud->getDados("SELECT * FROM usuarios WHERE id_usuario=$id_usuario");
@@ -17,7 +19,7 @@ include_once("cabecalhoAdmin.php");
     }
 
 }
-
+ */
 ?>
 
 <div class="container-fluid my-5">
@@ -46,7 +48,7 @@ include_once("cabecalhoAdmin.php");
                                         <strong>ID Usuário:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="id_usuario" name="id_usuario" class="form-control mb-4" readonly
-                                        value="<?php echo $id_usuario ?>" />
+                                        value="<?php echo $_SESSION['id_usuario'] ?>" />
 
                                         <br>  
 
@@ -56,7 +58,7 @@ include_once("cabecalhoAdmin.php");
                                         <strong>Nome:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="nome_usuario" name="nome_usuario" class="form-control mb-4" maxlength="50" placeholder="Nome do Usuário" required 
-                                        value="<?php echo $nome_usuario ?>" />
+                                        value="<?php echo $_SESSION['nome_usuario'] ?>" />
 
                                         <br>  
 
@@ -66,7 +68,7 @@ include_once("cabecalhoAdmin.php");
                                         <strong>Login:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="login" name="login" class="form-control mb-4" placeholder="Login do Usuário" maxlength="20" required 
-                                        value="<?php echo $login ?>" />
+                                        value="<?php echo $_SESSION['login'] ?>" />
                                                                             
                                         <br>  
 
@@ -76,7 +78,7 @@ include_once("cabecalhoAdmin.php");
                                         <strong>CPF:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="CPF" name="CPF" class="form-control mb-4" placeholder="CPF do Usuário" maxlength="14" required 
-                                        value="<?php echo $cpf ?>" />
+                                        value="<?php echo $_SESSION['CPF'] ?>" />
                                                                             
                                         <br>  
 
@@ -86,7 +88,7 @@ include_once("cabecalhoAdmin.php");
                                         <strong>Tipo:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="tipo" name="tipo" class="form-control mb-4" placeholder="Tipo de Usuário" maxlength="1" required 
-                                        value="<?php echo $tipo ?>" />
+                                        value="<?php echo $_SESSION['tipo'] ?>" />
                                                                             
                                         <br>                                          
 
@@ -96,7 +98,7 @@ include_once("cabecalhoAdmin.php");
                                         <strong>E-mail:</strong>
                                         </label>
                                         <input class="form-control md-4" type="email" id="email" name="email" class="form-control mb-4" placeholder="Email do Usuário" maxlength="50" required 
-                                        value="<?php echo $email ?>" >                                        
+                                        value="<?php echo $_SESSION['email'] ?>" >                                        
 
                                         <br>  
                                         
@@ -124,14 +126,14 @@ include_once("cabecalhoAdmin.php");
                                         <strong>Situação:</strong>
                                         </label>
                                         <br>
-                                        <input type="radio" id="situacao1" name="situacao" value="1" <?php echo ($situacao == "1") ? "checked" : null; ?> >                                        
+                                        <input type="radio" id="situacao1" name="situacao" value="1" <?php echo ($_SESSION['situacao'] == "1") ? "checked" : null; ?> >                                        
                                         <label class="form-check-label" for="situacao1">
                                         Disponível
                                         </label>
                                         
                                         <br>
 
-                                        <input type="radio" id="situacao0" name="situacao" value="0" <?php echo ($situacao == "0") ? "checked" : null; ?> >
+                                        <input type="radio" id="situacao0" name="situacao" value="0" <?php echo ($_SESSION['situacao'] == "0") ? "checked" : null; ?> >
                                         <label class="form-check-label" for="situacao0">
                                         Indisponível
                                         </label>
