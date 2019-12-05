@@ -25,7 +25,7 @@ if(isset($_POST['login']))
         $situacao = $linha['situacao'];
         $tipo = $linha['tipo'];
     }    
-        if($situacao == 0){
+        if($situacao == '0'){
             echo "<SCRIPT> 
             alert('Usuário Desativado!');
             location.href = 'index.php';     
