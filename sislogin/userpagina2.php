@@ -2,7 +2,9 @@
 include_once("cabecalhoUser.php");
 ?>
 
-<?php if(isset($_GET['id_usuario'])){
+<?php 
+/* 
+if(isset($_GET['id_usuario'])){
 
     $id_usuario = $crud->limpaTexto($_GET['id_usuario']);
     $resultado = $crud->getDados("SELECT * FROM usuarios WHERE id_usuario=$id_usuario");
@@ -21,6 +23,7 @@ include_once("cabecalhoUser.php");
 
 }
 
+ */
 ?>
 
 <div class="container-fluid my-5">
@@ -49,7 +52,7 @@ include_once("cabecalhoUser.php");
                                         <strong>ID Usuário:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="id_usuario" name="id_usuario" class="form-control mb-4" readonly
-                                        value="<?php echo $id_usuario ?>" />
+                                        value="<?php echo $_SESSION['id_usuario'] ?>" />
 
                                         <br>  
 
@@ -59,7 +62,7 @@ include_once("cabecalhoUser.php");
                                         <strong>Nome:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="nome_usuario" name="nome_usuario" class="form-control mb-4" maxlength="50" placeholder="Nome do Usuário" required 
-                                        value="<?php echo $nome_usuario ?>" />
+                                        value="<?php echo $_SESSION['nome_usuario'] ?>" />
 
                                         <br>  
 
@@ -70,7 +73,7 @@ include_once("cabecalhoUser.php");
                                         <strong>CPF:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="CPF" name="CPF" class="form-control mb-4" placeholder="CPF do Usuário" maxlength="14" required 
-                                        value="<?php echo $cpf ?>" />
+                                        value="<?php echo $_SESSION['CPF'] ?>" />
                                                                             
                                         <br>                                        
 
@@ -80,7 +83,7 @@ include_once("cabecalhoUser.php");
                                         <strong>E-mail:</strong>
                                         </label>
                                         <input class="form-control md-4" type="email" id="email" name="email" class="form-control mb-4" placeholder="Email do Usuário" maxlength="50" required 
-                                        value="<?php echo $email ?>" >                                        
+                                        value="<?php echo $_SESSION['email'] ?>" >                                        
 
                                         <br>  
                                         

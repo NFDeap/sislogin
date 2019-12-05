@@ -3,7 +3,7 @@ include_once("cabecalhoAdmin.php");
 ?>
 
 <?php 
-/* 
+
 if(isset($_GET['id_usuario'])){
 
     $id_usuario = $crud->limpaTexto($_GET['id_usuario']);
@@ -19,7 +19,7 @@ if(isset($_GET['id_usuario'])){
     }
 
 }
- */
+
 ?>
 
 <div class="container-fluid my-5">
@@ -48,7 +48,7 @@ if(isset($_GET['id_usuario'])){
                                         <strong>ID Usuário:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="id_usuario" name="id_usuario" class="form-control mb-4" readonly
-                                        value="<?php echo $_SESSION['id_usuario'] ?>" />
+                                        value="<?php echo $id_usuario ?>" />
 
                                         <br>  
 
@@ -58,7 +58,7 @@ if(isset($_GET['id_usuario'])){
                                         <strong>Nome:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="nome_usuario" name="nome_usuario" class="form-control mb-4" maxlength="50" placeholder="Nome do Usuário" required 
-                                        value="<?php echo $_SESSION['nome_usuario'] ?>" />
+                                        value="<?php echo $nome_usuario ?>" />
 
                                         <br>  
 
@@ -68,7 +68,7 @@ if(isset($_GET['id_usuario'])){
                                         <strong>Login:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="login" name="login" class="form-control mb-4" placeholder="Login do Usuário" maxlength="20" required 
-                                        value="<?php echo $_SESSION['login'] ?>" />
+                                        value="<?php echo $login ?>" />
                                                                             
                                         <br>  
 
@@ -78,7 +78,7 @@ if(isset($_GET['id_usuario'])){
                                         <strong>CPF:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="CPF" name="CPF" class="form-control mb-4" placeholder="CPF do Usuário" maxlength="14" required 
-                                        value="<?php echo $_SESSION['CPF'] ?>" />
+                                        value="<?php echo $cpf ?>" />
                                                                             
                                         <br>  
 
@@ -88,7 +88,7 @@ if(isset($_GET['id_usuario'])){
                                         <strong>Tipo:</strong>
                                         </label>
                                         <input class="form-control" type="text" id="tipo" name="tipo" class="form-control mb-4" placeholder="Tipo de Usuário" maxlength="1" required 
-                                        value="<?php echo $_SESSION['tipo'] ?>" />
+                                        value="<?php echo $tipo ?>" />
                                                                             
                                         <br>                                          
 
@@ -98,7 +98,7 @@ if(isset($_GET['id_usuario'])){
                                         <strong>E-mail:</strong>
                                         </label>
                                         <input class="form-control md-4" type="email" id="email" name="email" class="form-control mb-4" placeholder="Email do Usuário" maxlength="50" required 
-                                        value="<?php echo $_SESSION['email'] ?>" >                                        
+                                        value="<?php echo $email ?>" >                                        
 
                                         <br>  
                                         
@@ -126,14 +126,14 @@ if(isset($_GET['id_usuario'])){
                                         <strong>Situação:</strong>
                                         </label>
                                         <br>
-                                        <input type="radio" id="situacao1" name="situacao" value="1" <?php echo ($_SESSION['situacao'] == "1") ? "checked" : null; ?> >                                        
+                                        <input type="radio" id="situacao1" name="situacao" value="1" <?php echo ($situacao == "1") ? "checked" : null; ?> >                                        
                                         <label class="form-check-label" for="situacao1">
                                         Disponível
                                         </label>
                                         
                                         <br>
 
-                                        <input type="radio" id="situacao0" name="situacao" value="0" <?php echo ($_SESSION['situacao'] == "0") ? "checked" : null; ?> >
+                                        <input type="radio" id="situacao0" name="situacao" value="0" <?php echo ($situacao == "0") ? "checked" : null; ?> >
                                         <label class="form-check-label" for="situacao0">
                                         Indisponível
                                         </label>
