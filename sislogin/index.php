@@ -23,7 +23,23 @@ $validacoes = new Validacoes();
 
 
 <body class="bg-dark ">
+<!-- 
+<div class="container-fluid my-5">
+    <div class="row ">      
+    <div class="col">   
+        <p></p>
+    </div>
+    </div>
+</div>
 
+<div class="container-fluid my-5">
+    <div class="row ">      
+    <div class="col">   
+        <p></p>
+    </div>
+    </div>
+</div>
+ -->
 <div class="container-fluid my-5">
     <div class="row ">      
         <div class="col-6 mx-auto"> 
@@ -83,6 +99,22 @@ $validacoes = new Validacoes();
         </div>
     </div>
 </div>
+
+<!-- <div class="container-fluid my-5">
+    <div class="row ">      
+    <div class="col">   
+        <p></p>
+    </div>
+    </div>
+</div>
+
+<div class="container-fluid my-5">
+    <div class="row ">      
+    <div class="col">   
+        <p></p>
+    </div>
+    </div>
+</div> -->
 
 
 

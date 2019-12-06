@@ -9,7 +9,7 @@ include_once("cabecalhoAdmin.php");
     $resultado = $crud->getDados($query);    
 ?>
 
-<div class="geral">
+<div class="geral2">
 <div class="container-fluid my-5">
     <div class="row ">      
         <div class="col-6 sm-12 mx-auto"> 

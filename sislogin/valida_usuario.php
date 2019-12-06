@@ -6,6 +6,8 @@ include_once 'cabecalhoAdmin.php';
 <div class="geral">
 <div class="container-fluid my-5">
 
+
+
 <?php
 
 
@@ -59,6 +61,22 @@ if(isset($_POST['id_usuario'])){
 
 
 ?>
+
+<div class="container-fluid my-5">
+    <div class="row ">      
+    <div class="col">   
+        <p></p>
+    </div>
+    </div>
+</div>
+
+<div class="container-fluid my-5">
+    <div class="row ">      
+    <div class="col">   
+        <p></p>
+    </div>
+    </div>
+</div>
 
 </div>
 </div>

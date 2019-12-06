@@ -3,6 +3,24 @@
 include_once("cabecalhoAdmin.php");
 ?>
 
+
+<div class="container-fluid my-5">
+    <div class="row ">      
+    <div class="col">   
+        <p></p>
+    </div>
+    </div>
+</div>
+
+<div class="container-fluid my-5">
+    <div class="row ">      
+    <div class="col">   
+        <p></p>
+    </div>
+    </div>
+</div>
+
+<main role="main" class="container">
 <div class="geral">
 <div class="container-fluid my-5">
     <div class="row ">      
@@ -16,7 +34,25 @@ include_once("cabecalhoAdmin.php");
     </div>
 </div>
 </div>
+</main>
 
+
+
+<div class="container-fluid my-5">
+    <div class="row ">      
+    <div class="col">   
+        <p></p>
+    </div>
+    </div>
+</div>
+
+<div class="container-fluid my-5">
+    <div class="row ">      
+    <div class="col">   
+        <p></p>
+    </div>
+    </div>
+</div>
 
 <?php
 include_once("rodape.php");

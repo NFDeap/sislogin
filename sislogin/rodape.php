@@ -2,9 +2,9 @@
 <br>
 <br>
 
-<footer class="footer navbar-fixed-bottom">
+<footer class="footer">
 
-    <div class="bg-footer">
+    <div class="container-fluid bg-footer">
     
         <div class="row">
         

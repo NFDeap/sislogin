@@ -96,3 +96,5 @@ if(isset($_POST['alterarUsuario'])) {
 
 ?>
 
+</div>
+</div>
