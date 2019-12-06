@@ -1,4 +1,7 @@
 <?php include_once 'cabecalhoAdmin.php'; ?>
+
+<div class="geral">
+<div class="container-fluid my-5">
 <?php
 //Obtendo os dados do registro pelo ID
 $id_usuario = $crud->limpaTexto($_GET['id_usuario']);
@@ -11,5 +14,8 @@ if ($result) { //Se o resultado for true...
 	echo $validacoes->botao('Voltar para a Listagem', 'success', 'corpo.php', 'reply');
 }
 ?>
+
+</div>
+</div>
 
 <?php include_once 'rodape.php'; ?>

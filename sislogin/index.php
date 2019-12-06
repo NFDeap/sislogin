@@ -10,6 +10,7 @@ $crud = new Crud();
 $validacoes = new Validacoes();
 
 ?>
+
 <head>
 <!-- Carregando o CSS do Bootstrap -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,7 +20,9 @@ $validacoes = new Validacoes();
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
-<body class="bg-dark">
+
+
+<body class="bg-dark ">
 
 <div class="container-fluid my-5">
     <div class="row ">      
@@ -80,6 +83,8 @@ $validacoes = new Validacoes();
         </div>
     </div>
 </div>
+
+
 
 <?php
 include_once("rodape.php");

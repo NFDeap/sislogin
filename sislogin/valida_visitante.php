@@ -1,5 +1,9 @@
 
 
+
+<div class="geral">
+<div class="container-fluid my-5">
+
 <?php
 //incluindo as classes necessárias
 include_once("classes/crud.php");
@@ -91,6 +95,4 @@ if(isset($_POST['alterarUsuario'])) {
 }    
 
 ?>
-
-</body>
 

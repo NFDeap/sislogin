@@ -30,6 +30,7 @@ if(isset($_GET['id_usuario'])){
  */
 ?>
 
+<div class="geral">
 <div class="container-fluid my-5">
     <div class="row ">      
         <div class="col-6 mx-auto">                     
@@ -112,6 +113,7 @@ if(isset($_GET['id_usuario'])){
 
         </div>
     </div>
+</div>
 </div>
 
 <?php

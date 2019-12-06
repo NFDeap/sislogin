@@ -3,7 +3,7 @@
 include_once("cabecalhoAdmin.php");
 ?>
 
-
+<div class="geral">
 <div class="container-fluid my-5">
     <div class="row ">      
         <div class="col-6 mx-auto"> 
@@ -14,6 +14,7 @@ include_once("cabecalhoAdmin.php");
 
         </div>
     </div>
+</div>
 </div>
 
 
