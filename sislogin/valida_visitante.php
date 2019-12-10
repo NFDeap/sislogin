@@ -1,25 +1,10 @@
 
-
+<?php
+include_once 'cabecalhoUser.php';
+?>
 
 <div class="geral">
 <div class="container-fluid my-5">
-
-<?php
-//incluindo as classes necessárias
-include_once("classes/crud.php");
-include_once("classes/validacoes.php");
-//instanciando o objeto
-$crud = new Crud();
-$validacoes = new Validacoes();
-
-?>
-<head>
-<!-- Carregando o CSS do Bootstrap -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<!-- Carregando a fonte Material Design para visualização dos ícones do Google Fonts -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body class="bg-dark">
 
 <?php
 
@@ -98,3 +83,7 @@ if(isset($_POST['alterarUsuario'])) {
 
 </div>
 </div>
+
+<?php
+include_once 'rodape.php';
+?>

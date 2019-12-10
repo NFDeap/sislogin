@@ -11,6 +11,11 @@ $validacoes = new Validacoes();
 
 ?>
 
+
+<!DOCTYPE html>
+
+<html>
+
 <head>
 <!-- Carregando o CSS do Bootstrap -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,23 +28,7 @@ $validacoes = new Validacoes();
 
 
 <body class="bg-dark ">
-<!-- 
-<div class="container-fluid my-5">
-    <div class="row ">      
-    <div class="col">   
-        <p></p>
-    </div>
-    </div>
-</div>
 
-<div class="container-fluid my-5">
-    <div class="row ">      
-    <div class="col">   
-        <p></p>
-    </div>
-    </div>
-</div>
- -->
 <div class="container-fluid my-5">
     <div class="row ">      
         <div class="col-6 mx-auto"> 
@@ -51,15 +40,16 @@ $validacoes = new Validacoes();
 
                     <div class="card-body">
 
-                    <h5 class="card-title alert alert-primary">
-                    <strong>Sistema de Login</strong>
-                    </h5>
+                        <h5 class="card-title alert alert-primary">
+                        <strong>Sistema de Login</strong>
+                        </h5>
 
                         <p class="card-text">
 
                         <i class="fa fa-address-card" aria-hidden="true"></i>
                         &nbsp;&nbsp;
                         <label for="email">
+                        <i class='material-icons vertical-align-middle'>contact_mail</i>
                         E-mail:
                         </label>
                         <input class="form-control" type="email" id="email" name="email"
@@ -71,6 +61,7 @@ $validacoes = new Validacoes();
                         <i class="fa fa-key"></i>
                         &nbsp;&nbsp;
                         <label for="senha">
+                        <i class='material-icons vertical-align-middle'>vpn_key</i>
                         Senha:
                         </label>
                         <input class="form-control" type="password" id="senha" name="senha"
@@ -86,7 +77,6 @@ $validacoes = new Validacoes();
                         
                         <?php echo $validacoes->botao('Novo Usuário', 'btn btn-sm btn-outline-primary', 'novo_usuario.php', 'note_add');	?>	
 
-
                         <button type="submit" id="login" name="login" class="btn btn-sm btn-outline-success">
                         <i class='material-icons vertical-align-middle'>done</i>
                             Entrar
@@ -99,24 +89,6 @@ $validacoes = new Validacoes();
         </div>
     </div>
 </div>
-
-<!-- <div class="container-fluid my-5">
-    <div class="row ">      
-    <div class="col">   
-        <p></p>
-    </div>
-    </div>
-</div>
-
-<div class="container-fluid my-5">
-    <div class="row ">      
-    <div class="col">   
-        <p></p>
-    </div>
-    </div>
-</div> -->
-
-
 
 <?php
 include_once("rodape.php");
