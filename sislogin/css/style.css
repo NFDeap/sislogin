@@ -48,5 +48,10 @@ table tbody tr th .btnTable{
     height: 60px;
     line-height: 60px;
     background-color: #f5f5f5;
-    display: block;
+    display: block;    
+}
+
+
+.card {
+    border-radius: 8px 0px 8px 0px;
 }
