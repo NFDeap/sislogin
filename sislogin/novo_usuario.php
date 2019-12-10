@@ -1,13 +1,32 @@
+<?php
+//incluindo as classes necessárias
+include_once("classes/crud.php");
+include_once("classes/validacoes.php");
+//instanciando o objeto
+$crud = new Crud();
+$validacoes = new Validacoes();
+
+?>
+
+
+<!DOCTYPE html>
+
+<html>
 
 <head>
+
 <!-- Carregando o CSS do Bootstrap -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- Carregando a fonte Material Design para visualização dos ícones do Google Fonts -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
 </head>
 <body class="bg-dark">
 
-
+<div class="geral">
 <div class="container-fluid my-5">
     <div class="row ">      
         <div class="col-6 mx-auto">  
@@ -86,7 +105,7 @@
                         </div>
 
                         <div class="col">                            
-                        <button type="submit" id="salvarUsario" name="salvarUsario" class="btn btn-sm btn-outline-primary">
+                        <button type="submit" id="salvarUsuario" name="salvarUsuario" class="btn btn-sm btn-outline-primary">
                         <i class='material-icons vertical-align-middle'>save</i>
                             Salvar
                         </button>    
@@ -97,8 +116,9 @@
                 </div>
             </form>
         </div>
-    </div>
 </div>                
 
-</body>
 
+<?php
+include_once 'rodape.php';
+?>

@@ -1,14 +1,38 @@
 
 <?php
-include_once 'cabecalhoUser.php';
+//incluindo as classes necessárias
+include_once("classes/crud.php");
+include_once("classes/validacoes.php");
+//instanciando o objeto
+$crud = new Crud();
+$validacoes = new Validacoes();
+
 ?>
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<!-- Carregando o CSS do Bootstrap -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Carregando a fonte Material Design para visualização dos ícones do Google Fonts -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+</head>
+<body class="bg-dark">
 
 <div class="geral">
 <div class="container-fluid my-5">
 
 <?php
 
-if(isset($_POST['salvarUsario'])) { 
+if(isset($_POST['salvarUsuario'])) { 
         
     $nome_usuario = $crud->limpaTexto($_POST['nome_usuario']);		
     $cpf = $crud->limpaTexto($_POST['CPF']);			
