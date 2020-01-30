@@ -14,7 +14,7 @@ if(!isset($_SESSION['id_usuario'])) { //Se ainda não estiver logado
 
 <?php 
 
-if(isset($_GET['id_usuario'])){
+/* if(isset($_GET['id_usuario'])){
 
     $id_usuario = $crud->limpaTexto($_GET['id_usuario']);
     $resultado = $crud->getDados("SELECT * FROM usuarios WHERE id_usuario=$id_usuario");
@@ -26,7 +26,7 @@ if(isset($_GET['id_usuario'])){
       $situacao = $linha['situacao'];
     }
 
-}
+} */
 
 ?>
 
@@ -67,7 +67,7 @@ if(isset($_GET['id_usuario'])){
                                             <strong>Nome:</strong>
                                             </label>
                                             <input class="form-control" readonly type="text" id="nome" name="nome" class="form-control mb-4" maxlength="50" placeholder="Nome do Usuário" required 
-                                            value="<?php echo $nome_usuario ?>" />
+                                            value="<?php echo $_SESSION['nome_usuario'] ?>" />
 
                                             <br>  
 
@@ -77,7 +77,7 @@ if(isset($_GET['id_usuario'])){
                                             <strong>Login:</strong>
                                             </label>
                                             <input class="form-control" readonly type="text" id="login" name="login" class="form-control mb-4" placeholder="Login do Usuário" maxlength="20" required 
-                                            value="<?php echo $login ?>" />
+                                            value="<?php echo $_SESSION['login'] ?>" />
                                                                                 
                                             <br>  
 
@@ -87,7 +87,7 @@ if(isset($_GET['id_usuario'])){
                                             <strong>E-mail:</strong>
                                             </label>
                                             <input class="form-control md-4" readonly type="email" id="email" name="email" class="form-control mb-4" placeholder="Email do Usuário" maxlength="50" required 
-                                            value="<?php echo $email ?>" >                                        
+                                            value="<?php echo $_SESSION['email']?>" >                                        
 
                                             <br> 
                                         
@@ -114,6 +114,11 @@ if(isset($_GET['id_usuario'])){
             </div>
         </div>
     </div>
+
+    <?php
+    include_once("likedeslike.php");
+    ?>
+
 </div>
 
 <?php

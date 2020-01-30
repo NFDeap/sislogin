@@ -55,3 +55,26 @@ table tbody tr th .btnTable{
 .card {
     border-radius: 8px 0px 8px 0px;
 }
+
+.like-btn {
+    transition: linear 0.3s;
+    background-color: rgb(16, 83, 230);
+    border-color:  rgb(16, 83, 230) !important;
+}
+
+.isActive {
+    transition: linear 0.3s;
+    background-color: rgb(5, 165, 5);
+    border-color:  rgb(5, 165, 5) !important;
+}
+
+.fa {
+    font-size: 1.2em;
+  }
+  .fa-thumbs-down, .fa-thumbs-o-down {
+    transform:rotateY(180deg);
+  }
+
+  i {
+    color: rgb(29, 74, 221);
+  }

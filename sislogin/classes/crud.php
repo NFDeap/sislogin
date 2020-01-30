@@ -75,6 +75,7 @@ class Crud extends Database
 	{
 		return $this->connection->real_escape_string($texto);
 	}
+
 }
 ?>
 

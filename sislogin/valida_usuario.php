@@ -61,26 +61,3 @@ if(isset($_POST['id_usuario'])){
 
 
 ?>
-
-<div class="container-fluid my-5">
-    <div class="row ">      
-    <div class="col">   
-        <p></p>
-    </div>
-    </div>
-</div>
-
-<div class="container-fluid my-5">
-    <div class="row ">      
-    <div class="col">   
-        <p></p>
-    </div>
-    </div>
-</div>
-
-</div>
-</div>
-
-<?php
-include_once 'rodape.php';
-?>

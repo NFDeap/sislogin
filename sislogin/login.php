@@ -36,13 +36,15 @@ if(isset($_POST['login']))
             </SCRIPT>";
         } else {	     
             if(password_verify($senha , $senhacriptografada)) {
-                $_SESSION['id_usuario'] = $id_usuario;
-                $_SESSION['email'] = $_POST['email'];                
-                $_SESSION['login'] = $login;
-                $_SESSION['situacao'] = $situacao;
-                $_SESSION['nome_usuario'] = $nome_usuario;
-                $_SESSION['tipo'] = $tipo;
-                $_SESSION['CPF'] = $cpf;
+                $data = array(
+                'id_usuario'    => $_SESSION['id_usuario'] = $id_usuario,
+                'email'         => $_SESSION['email'] = $_POST['email'],
+                'login'         => $_SESSION['login'] = $login,
+                'situacao'      => $_SESSION['situacao'] = $situacao,
+                'nome_usuario'  => $_SESSION['nome_usuario'] = $nome_usuario,                
+                'tipo'          => $_SESSION['tipo'] = $tipo,
+                'CPF'           => $_SESSION['CPF'] = $cpf                
+                );
                     if($tipo == 1){
                     header("Location: adminindex.php?id_usuario=$linha[id_usuario]");
                     $update = $crud->executarSql("UPDATE usuarios SET sessao=NOW() WHERE id_usuario=$id_usuario");
