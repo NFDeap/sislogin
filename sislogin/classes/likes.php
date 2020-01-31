@@ -53,5 +53,6 @@ class Likes extends Database
             }
             
             $like_result = $crud->executarSql($sql);
+            return $like_result;
     }
 }

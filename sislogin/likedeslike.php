@@ -36,7 +36,10 @@ $id_user = $_SESSION['id_usuario'];
                         <div class="row">                        
                             <!-- <button id="btnTry" onclick="myFunction()">Try it</button> -->
                             <a>
-                                <div class="post-id"> <?php echo $post['id']; ?></div>
+                                <div class="post-id like fa fa-thumbs-up"> <?php echo $post['id']; ?></div>
+                            </a>
+                            <a>
+                                <div class="post-id dislike fa fa-thumbs-down"> <?php echo $post['id']; ?></div>
                             </a>
                             <span id="demo"></span>
                             <!-- <a href="#"><i class="fa fa-thumbs-up like-btn" aria-hidden="true" data-id="<?php echo $post['id']; ?>"></i></a>
@@ -56,12 +59,7 @@ $id_user = $_SESSION['id_usuario'];
 
 <br>
 
-<script>
-    $('a').on('click', function(){
-        var post_id = $(this).find('.post-id').html();        
-        document.getElementById("demo").innerHTML = post_id;        
-    });
-</script>
+<script src="like.js"></script>
 
 <!-- <script src="like.js"></script> -->
 
