@@ -1,14 +1,15 @@
 <?php
 include('classes/likes.php');
 
-$like = new Likes();
+$posts = new Likes();
 
-$result = $like->like();
+$result = $posts->posts();
+
+$id_user = $_SESSION['id_usuario'];
 
 ?>
 
 <div class="container">
-
     <div class="row">
 
         <div class="col">
@@ -28,20 +29,27 @@ $result = $like->like();
 
                     </div>
 
+
                     <div class="card-footer text-muted text-center">
-                        <div class="row align-right">
-                            <span>1</span>
+                        <div class="row align-right">                            
                         </div>
-                        <div class="row">
-                            <i class="fa fa-thumbs-up" aria-hidden="true" data-id="<?php echo $post['id']; ?>"></i>
-                            <p id="demo"></p>
+                        <div class="row">                        
+                            <!-- <button id="btnTry" onclick="myFunction()">Try it</button> -->
+                            <a>
+                                <div class="post-id"> <?php echo $post['id']; ?></div>
+                            </a>
+                            <span id="demo"></span>
+                            <!-- <a href="#"><i class="fa fa-thumbs-up like-btn" aria-hidden="true" data-id="<?php echo $post['id']; ?>"></i></a>
+                            <i class="fa fa-thumbs-down dislike-btn" aria-hidden="true" data-id="<?php echo $post['id']; ?>"></i> -->
+                            
+                        </form>
                         </div>
                     </div>
 
                 </div>
                 <br>
             <?php endforeach; ?>
-
+            
         </div>
     </div>
 </div>
@@ -49,12 +57,16 @@ $result = $like->like();
 <br>
 
 <script>
-    $(document).ready(function() {
-        
-        $('.like-btn').on('click', function(){
-            var post_id = $($this).data('id');
-            document.getElementById("demo").innerHTML = post_id;
-        });
+    $('a').on('click', function(){
+        var post_id = $(this).find('.post-id').html();        
+        document.getElementById("demo").innerHTML = post_id;        
+    });
+</script>
+
+<!-- <script src="like.js"></script> -->
+
+<!-- 
+<script>
 
       /*   document.getElementById("likeBtn").addEventListener(
             "click",
@@ -72,5 +84,4 @@ $result = $like->like();
             $('#likeBtn').toggleClass('isActive');
         }); */
 
-    });
-</script>
+</script> -->
